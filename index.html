@@ -658,7 +658,7 @@ h3{font-size:var(--fs-h3)}
     <div class="help-grid">
       <article class="help-card help-money">
         <h3 data-i18n="money_t">Пожертвование</h3>
-        <p data-i18n="money_d">Переведите любую сумму через Kaspi или по банковским реквизитам. В назначении платежа напишите «Благотворительная помощь».</p>
+        <p data-i18n="money_d">Переведите любую сумму через Kaspi по номеру телефона ниже.</p>
         <div class="money-details" id="g-money" data-group>
           <div class="kaspi" data-row>
             <p class="kaspi-label" data-i18n="kaspi_label">Kaspi, перевод по номеру телефона</p>
@@ -666,6 +666,7 @@ h3{font-size:var(--fs-h3)}
               <span class="mono" id="v-kaspi" data-cfg="kaspiPhone"></span>
               <button class="copy" type="button" data-copy="kaspiPhone" data-target="v-kaspi" data-i18n="copy_btn">Копировать</button>
             </div>
+            <p class="kaspi-label" data-row><span data-i18n="kaspi_name">Получатель:</span> <strong data-cfg="kaspiName"></strong></p>
           </div>
           <div class="reqs-wrap" data-group>
             <h4 data-i18n="req_title">Банковские реквизиты</h4>
@@ -797,7 +798,8 @@ h3{font-size:var(--fs-h3)}
     email: '',
     instagram: '',                // имя аккаунта без @
     telegram: '',                 // имя канала без @
-    kaspiPhone: '',               // номер для переводов в Kaspi
+    kaspiPhone: '+7 700 212 08 98', // номер для переводов в Kaspi
+    kaspiName: 'Рахман К.',       // имя получателя, как его покажет Kaspi
     bank: {
       recipient: '',              // получатель, как в банке
       bin: '',
@@ -930,8 +932,9 @@ h3{font-size:var(--fs-h3)}
     help_title: 'Арал балаларына қолдау көрсетіңіз',
     help_lead: 'Қаржымен, уақытыңызбен немесе біліміңізбен көмектесе аласыз. Әр үлес сабақтарға, үйірмелерге және балалардың оқуына қажетті заттарға жұмсалады.',
     money_t: 'Қайырымдылық жарна',
-    money_d: 'Kaspi арқылы немесе банк деректемелері бойынша кез келген соманы аударыңыз. Төлем мақсатына «Қайырымдылық көмек» деп жазыңыз.',
+    money_d: 'Төмендегі телефон нөмірі бойынша Kaspi арқылы кез келген соманы аударыңыз.',
     kaspi_label: 'Kaspi, телефон нөмірі бойынша аударым',
+    kaspi_name: 'Алушы:',
     copy_btn: 'Көшіру',
     req_title: 'Банк деректемелері',
     req_recipient: 'Алушы',

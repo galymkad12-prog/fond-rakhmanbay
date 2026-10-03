@@ -1,0 +1,1311 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Фонд «Рахманбай»</title>
+<meta name="description" content="Благотворительный фонд «Рахманбай» в Аральске помогает школьникам, которые учатся на «3»: бесплатные занятия с репетиторами, наставники, кружки и поддержка семьи.">
+<meta name="theme-color" content="#0B3D48">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Фонд «Рахманбай» · Аральск">
+<meta property="og:description" content="Помогаем школьникам Аральска, которые учатся на «3», подтянуть учёбу, найти любимое дело и поверить в себя.">
+<meta property="og:locale" content="ru_KZ">
+<meta property="og:locale:alternate" content="kk_KZ">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23F3B23A'/%3E%3Cpath d='M11 39C9 23 25 20 31 34C37 20 53 23 51 39' fill='none' stroke='%230C2A31' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Unbounded:wght@500;600;700&display=swap">
+<style>
+/* Layout: left-aligned column on a salt-white ground (the dried Aral seabed), one deep-sea band for "how to help", wave edges between bands */
+:root{
+  --salt:#F1F5F3;
+  --salt-2:#E2EBE7;
+  --paper:#FFFFFF;
+  --ink:#0C2A31;
+  --ink-soft:#43606A;
+  --line:#C9D7D3;
+  --sea:#0E6577;
+  --sea-2:#5FA8B3;
+  --on-sea:#FFFFFF;
+  --sun:#F3B23A;
+  --on-sun:#1D1606;
+  --sand:#E6D3A8;
+  --rust:#9A4B2C;
+  --sky:#D7E9EA;
+  --gull:#0C2A31;
+  --pen:#C2362B;
+  --ph:#8A5A00;
+  --band:#0B3D48;
+  --band-2:#0F4B58;
+  --band-ink:#EAF4F2;
+  --band-soft:#B6D1D2;
+  --band-line:rgba(234,244,242,.2);
+  --err:#B3261E;
+  --ok:#1F7A4D;
+  --focus:#0E6577;
+  --header-bg:rgba(241,245,243,.92);
+
+  --font-display:"Unbounded","Golos Text","Segoe UI",system-ui,sans-serif;
+  --font-body:"Golos Text","Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;
+  --fs-h1:clamp(2rem,1.2rem + 3.6vw,3.6rem);
+  --fs-h2:clamp(1.5rem,1.1rem + 1.9vw,2.4rem);
+  --fs-h3:clamp(1.02rem,.98rem + .3vw,1.18rem);
+  --fs-lead:clamp(1.08rem,1rem + .45vw,1.28rem);
+  --radius:16px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --salt:#0A1C21; --salt-2:#10272D; --paper:#132E35; --ink:#E6F0EE; --ink-soft:#A3BCBE; --line:#24434A;
+    --sea:#57B7C6; --sea-2:#2F7F8C; --on-sea:#04161A; --sun:#F3B23A; --on-sun:#1D1606; --sand:#4A4130;
+    --rust:#C0714B; --sky:#12333A; --gull:#E6F0EE; --pen:#FF8A7A; --ph:#F3C46B;
+    --band:#061419; --band-2:#0D262D; --band-ink:#EAF4F2; --band-soft:#A9C6C8; --band-line:rgba(234,244,242,.14);
+    --err:#FF8A80; --ok:#6FD49B; --focus:#F3B23A; --header-bg:rgba(10,28,33,.9);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --salt:#0A1C21; --salt-2:#10272D; --paper:#132E35; --ink:#E6F0EE; --ink-soft:#A3BCBE; --line:#24434A;
+  --sea:#57B7C6; --sea-2:#2F7F8C; --on-sea:#04161A; --sun:#F3B23A; --on-sun:#1D1606; --sand:#4A4130;
+  --rust:#C0714B; --sky:#12333A; --gull:#E6F0EE; --pen:#FF8A7A; --ph:#F3C46B;
+  --band:#061419; --band-2:#0D262D; --band-ink:#EAF4F2; --band-soft:#A9C6C8; --band-line:rgba(234,244,242,.14);
+  --err:#FF8A80; --ok:#6FD49B; --focus:#F3B23A; --header-bg:rgba(10,28,33,.9);
+  color-scheme:dark;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:88px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--salt);color:var(--ink);font:400 1.0625rem/1.6 var(--font-body);overflow-x:clip}
+img,svg{max-width:100%}
+p,ul,ol,dl,dd,figure,h1,h2,h3,h4{margin:0}
+a{color:var(--sea);text-underline-offset:3px}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;line-height:1.18;letter-spacing:-.01em;text-wrap:balance;overflow-wrap:break-word}
+h2{font-size:var(--fs-h2)}
+h3{font-size:var(--fs-h3)}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:6px}
+[hidden]{display:none!important}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+.wrap{max-width:1180px;margin-inline:auto;padding-inline:clamp(16px,4vw,40px)}
+.section{padding-block:clamp(64px,9vw,120px)}
+.kicker{font:600 .8rem/1.2 var(--font-body);text-transform:uppercase;letter-spacing:.12em;color:var(--sea)}
+.lead{font-size:var(--fs-lead);color:var(--ink-soft);max-width:60ch}
+.head{display:flex;flex-direction:column;gap:14px;max-width:64ch}
+
+.skip{position:absolute;left:16px;top:-80px;z-index:100;background:var(--ink);color:var(--salt);padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:600}
+.skip:focus{top:12px}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:12px 22px;border-radius:999px;border:2px solid transparent;font:600 1rem/1.2 var(--font-body);text-decoration:none;cursor:pointer;text-align:center;transition:transform .15s ease,background-color .15s ease,color .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-sea{background:var(--sea);color:var(--on-sea)}
+.btn-sun{background:var(--sun);color:var(--on-sun)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn-ghost-light{background:transparent;color:var(--band-ink);border-color:var(--band-ink)}
+.btn-sm{min-height:40px;padding:8px 16px;font-size:.92rem}
+.btn-link{background:none;border:0;color:var(--sea);text-decoration:underline;padding-inline:6px;min-height:48px;font:600 1rem/1.2 var(--font-body);cursor:pointer}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+
+/* Shown while the owner has not filled a CONFIG group yet */
+.soon{color:var(--ink-soft);font-style:italic}
+.band .soon{color:var(--band-soft);padding:16px;border:1px dashed var(--band-line);border-radius:12px;font-style:normal}
+#contacts-soon{margin-top:24px;max-width:60ch}
+.money-details,.reqs-wrap{display:flex;flex-direction:column;gap:12px}
+
+/* Header */
+.site-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--header-bg);-webkit-backdrop-filter:saturate(1.4) blur(10px);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+.header-row{display:flex;align-items:center;gap:14px;min-height:68px;position:relative}
+.brand{display:flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;margin-right:auto;min-width:0}
+.brand-mark{width:40px;height:40px;flex:none}
+.mk-sun{fill:var(--sun)}
+.mk-gull{fill:none;stroke:var(--on-sun);stroke-width:6;stroke-linecap:round;stroke-linejoin:round}
+.brand-text{display:flex;flex-direction:column;min-width:0}
+.brand-name{font:700 1.05rem/1.1 var(--font-display);letter-spacing:-.01em}
+.brand-sub{font-size:.78rem;line-height:1.3;color:var(--ink-soft)}
+.site-nav ul{list-style:none;padding:0;display:flex;gap:2px}
+.site-nav a{display:block;padding:8px 10px;border-radius:8px;color:var(--ink);text-decoration:none;font-weight:500;font-size:.95rem;white-space:nowrap}
+.site-nav a:hover{background:var(--salt-2)}
+.site-nav .nav-help{display:none}
+.header-tools{display:flex;align-items:center;gap:10px;flex:none}
+.lang{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:3px;background:var(--paper)}
+.lang button{border:0;background:transparent;color:var(--ink-soft);font:600 .8rem/1 var(--font-body);letter-spacing:.06em;padding:8px 10px;min-height:34px;border-radius:999px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--ink);color:var(--salt)}
+.menu-btn{display:none;width:44px;height:44px;border:1px solid var(--line);background:var(--paper);border-radius:12px;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:0}
+.menu-btn span{display:block;width:18px;height:2px;background:var(--ink);border-radius:2px;transition:transform .2s ease,opacity .2s ease}
+.site-header.open .menu-btn span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.site-header.open .menu-btn span:nth-child(2){opacity:0}
+.site-header.open .menu-btn span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media (max-width:1199px){
+  .menu-btn{display:inline-flex}
+  .site-nav{display:none;position:absolute;left:calc(-1 * clamp(16px,4vw,40px));right:calc(-1 * clamp(16px,4vw,40px));top:100%;background:var(--salt);border-bottom:1px solid var(--line);padding:8px clamp(16px,4vw,40px) 20px;box-shadow:0 18px 30px rgba(12,42,49,.12)}
+  .site-header.open .site-nav{display:block}
+  .site-nav ul{flex-direction:column}
+  .site-nav a{padding:13px 8px;font-size:1.05rem;border-bottom:1px solid var(--line);border-radius:0}
+  .site-nav .nav-help{display:block}
+}
+@media (max-width:599px){.header-cta{display:none}}
+@media (max-width:459px){.brand-sub{display:none}}
+
+/* Hero */
+.hero{padding-block:clamp(36px,6vw,84px) clamp(44px,6vw,88px)}
+.hero-grid{display:grid;gap:clamp(32px,5vw,64px);align-items:center}
+.hero-copy{display:flex;flex-direction:column;gap:20px;min-width:0}
+.eyebrow{font:600 .82rem/1.3 var(--font-body);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
+.hero h1{font-size:var(--fs-h1);font-weight:700;line-height:1.08}
+.hero h1 .pen{color:var(--pen);white-space:nowrap}
+.hero .cta-row{margin-top:8px}
+.hero-note{font-size:.92rem;color:var(--ink-soft)}
+.hero-art{min-width:0}
+.hero-art svg{display:block;width:100%;height:auto;border-radius:220px 220px 20px 20px;background:var(--sky)}
+.hero-art figcaption{margin-top:12px;font-size:.92rem;color:var(--ink-soft)}
+@media (min-width:900px){.hero-grid{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr)}}
+.a-sky{fill:var(--sky)}
+.a-sun{fill:var(--sun)}
+.a-sea2{fill:var(--sea-2)}
+.a-sea{fill:var(--sea)}
+.a-sand{fill:var(--sand)}
+.a-ship{fill:var(--rust)}
+.a-rig{fill:none;stroke:var(--rust);stroke-width:3;stroke-linecap:round}
+.t{fill:none;stroke-width:6;stroke-linecap:round;stroke-linejoin:round}
+.t-pen{stroke:var(--pen)}
+.t-sea{stroke:var(--sea)}
+.t-sun{stroke:var(--on-sun)}
+.t-gull{stroke:var(--gull)}
+.bob{animation:bob 5.5s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.bob-2{animation-duration:7s;animation-delay:-2.5s}
+@keyframes bob{50%{transform:translateY(-7px)}}
+
+/* Promise strip */
+.promise{background:var(--paper);border-block:1px solid var(--line)}
+.promise-grid{display:grid;gap:22px 32px;padding-block:28px}
+.promise-item{display:flex;gap:16px;align-items:flex-start;min-width:0}
+.glyph{flex:none;width:64px;font:700 1.35rem/1.1 var(--font-display);color:var(--sea)}
+.glyph svg{width:34px;height:34px;fill:none;stroke:var(--sea);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.glyph-small{font-size:.82rem;letter-spacing:.04em;line-height:1.35}
+.promise-item strong{display:block;font-weight:700;margin-bottom:2px}
+.promise-item p{color:var(--ink-soft);font-size:.95rem}
+@media (min-width:780px){.promise-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+/* About */
+.about-grid{display:grid;gap:40px}
+.about-copy{display:flex;flex-direction:column;gap:18px;max-width:64ch;min-width:0}
+.about-copy p{color:var(--ink-soft)}
+.about-copy .first{color:var(--ink);font-size:var(--fs-lead)}
+.story{display:flex;flex-direction:column;gap:6px;padding-top:18px;border-top:1px solid var(--line)}
+.story-label{font:600 .78rem/1.2 var(--font-body);text-transform:uppercase;letter-spacing:.1em;color:var(--ink-soft)}
+.aral-note{position:relative;overflow:hidden;background:var(--sea);color:var(--on-sea);border-radius:var(--radius);padding:clamp(24px,4vw,36px) clamp(24px,4vw,36px) 84px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.aral-note .kicker{color:var(--on-sea);opacity:.8}
+.aral-note h3{font-size:1.35rem}
+.aral-note svg{position:absolute;left:0;right:0;bottom:0;width:100%;height:64px}
+.aral-note .w1{fill:var(--sea-2);opacity:.55}
+.aral-note .w2{fill:var(--on-sea);opacity:.18}
+@media (min-width:900px){.about-grid{grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);align-items:start}}
+
+/* Programs */
+.prog-grid{display:grid;gap:0 36px;margin-top:44px}
+.prog{display:flex;flex-direction:column;gap:10px;padding-block:28px;border-top:1px solid var(--line);min-width:0}
+.prog svg{width:36px;height:36px;fill:none;stroke:var(--sea);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.prog p{color:var(--ink-soft)}
+@media (min-width:640px){.prog-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:1000px){.prog-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+/* How it works */
+.how{background:var(--salt-2)}
+.steps{list-style:none;padding:0;margin-top:44px;display:grid;gap:30px;counter-reset:step}
+.step{counter-increment:step;position:relative;display:flex;flex-direction:column;gap:6px;padding-left:66px;min-width:0}
+.step::before{content:counter(step);position:absolute;left:0;top:-4px;width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--paper);border:2px solid var(--sea);color:var(--sea);font:700 1.05rem/1 var(--font-display)}
+.step::after{content:"";position:absolute;left:23px;top:50px;bottom:-26px;border-left:2px dashed var(--sea-2)}
+.step:last-child::after{display:none}
+.step p{color:var(--ink-soft);font-size:.98rem}
+@media (min-width:960px){
+  .steps{grid-template-columns:repeat(5,minmax(0,1fr));gap:24px}
+  .step{padding-left:0;padding-top:66px}
+  .step::before{top:0}
+  .step::after{left:58px;right:-14px;top:24px;bottom:auto;border-left:0;border-top:2px dashed var(--sea-2)}
+}
+.who{margin-top:56px;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(22px,4vw,40px);display:grid;gap:22px}
+.who h3{font-size:clamp(1.2rem,1rem + .8vw,1.5rem)}
+.who-note{color:var(--ink-soft);font-size:.92rem}
+.checks{list-style:none;padding:0;display:flex;flex-direction:column;gap:14px}
+.checks li{display:flex;gap:12px;align-items:flex-start}
+.checks svg{flex:none;width:24px;height:24px;margin-top:1px;fill:none;stroke:var(--sea);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+@media (min-width:900px){.who{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}}
+
+/* Application form */
+.apply-grid{display:grid;gap:40px}
+.apply-side{display:flex;flex-direction:column;gap:18px;min-width:0}
+.next{display:flex;flex-direction:column;gap:10px;padding-top:18px;border-top:1px solid var(--line)}
+.next h3{font-size:1rem}
+.next ol{padding-left:1.3em;display:flex;flex-direction:column;gap:6px;color:var(--ink-soft)}
+@media (min-width:1000px){.apply-grid{grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);align-items:start}}
+.form,.result{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(20px,4vw,36px);min-width:0}
+.form-grid{display:grid;gap:22px}
+@media (min-width:640px){.form-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0;border:0;padding:0;margin:0}
+.field-full{grid-column:1/-1}
+.field label,.field legend{font-weight:600;font-size:.95rem;padding:0}
+.req{color:var(--pen)}
+.opt{font-weight:400;color:var(--ink-soft)}
+.field input[type="text"],.field input[type="tel"],.field select,.field textarea,.result textarea{width:100%;font:inherit;font-size:1rem;color:var(--ink);background:var(--salt);border:1.5px solid var(--line);border-radius:10px;padding:12px 14px;min-height:48px}
+.field textarea{min-height:104px;resize:vertical}
+.field input:focus-visible,.field select:focus-visible,.field textarea:focus-visible{border-color:var(--sea);outline-offset:1px}
+.field [aria-invalid="true"]{border-color:var(--err)}
+.hint{color:var(--ink-soft);font-size:.88rem}
+.err{color:var(--err);font-size:.9rem;font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.chip{position:relative;display:inline-flex}
+.chip input{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+.chip span{display:inline-flex;align-items:center;min-height:40px;padding:8px 14px;border:1.5px solid var(--line);border-radius:999px;background:var(--salt);font-weight:500;font-size:.95rem;cursor:pointer;user-select:none}
+.chip input:checked + span{background:var(--sea);border-color:var(--sea);color:var(--on-sea)}
+.chip input:focus-visible + span{outline:3px solid var(--focus);outline-offset:2px}
+.check{flex-direction:row;flex-wrap:wrap;align-items:flex-start;gap:12px}
+.check input{flex:none;width:22px;height:22px;margin:2px 0 0;accent-color:var(--sea)}
+.check label{flex:1;min-width:0;font-weight:400}
+.check .err{flex-basis:100%}
+.form-foot{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;margin-top:28px}
+.form-note{font-size:.9rem;color:var(--ink-soft)}
+.form-summary{margin-top:14px;color:var(--err);font-weight:600}
+.result{display:flex;flex-direction:column;gap:14px;border:2px solid var(--sea)}
+.result:focus{outline:none}
+.result h3{font-size:1.3rem}
+.result textarea{min-height:230px;resize:vertical;line-height:1.5}
+.status{font-weight:600;color:var(--ok)}
+.status.warn{color:var(--err)}
+
+/* Help band */
+.band{position:relative;background:var(--band);color:var(--band-ink);margin-block:48px;padding-block:clamp(64px,9vw,112px)}
+.band-edge{position:absolute;left:0;width:100%;height:48px;display:block;fill:var(--band)}
+.band-edge.top{top:-47px}
+.band-edge.bottom{bottom:-47px;transform:scaleY(-1)}
+.band .kicker{color:var(--sun)}
+.band .lead{color:var(--band-soft)}
+.band a{color:var(--band-ink)}
+.band :focus-visible{outline-color:var(--sun)}
+.help-grid{display:grid;gap:20px;margin-top:44px}
+.help-card{background:var(--band-2);border:1px solid var(--band-line);border-radius:var(--radius);padding:clamp(20px,3.5vw,32px);display:flex;flex-direction:column;gap:14px;min-width:0}
+.help-card h3{font-size:1.25rem}
+.help-card > p{color:var(--band-soft)}
+.help-card h4{font:600 .78rem/1.2 var(--font-body);text-transform:uppercase;letter-spacing:.1em;color:var(--band-soft);margin-top:6px}
+.help-card .cta-row{margin-top:auto;padding-top:6px}
+.kaspi{background:var(--band);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:8px}
+.kaspi-label{font-size:.9rem;color:var(--band-soft)}
+.copy-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px}
+.mono{font-variant-numeric:tabular-nums;font-weight:600;font-size:1.12rem;letter-spacing:.02em;overflow-wrap:anywhere;min-width:0}
+.reqs > div{display:grid;grid-template-columns:minmax(0,7.5rem) minmax(0,1fr) auto;gap:4px 12px;align-items:center;padding-block:10px;border-top:1px solid var(--band-line)}
+.reqs dt{color:var(--band-soft);font-size:.9rem}
+.reqs dd{font-weight:600;font-variant-numeric:tabular-nums;overflow-wrap:anywhere;min-width:0}
+.reqs dd:last-child{grid-column:2/-1}
+@media (max-width:520px){
+  .reqs > div{grid-template-columns:minmax(0,1fr) auto}
+  .reqs dt{grid-column:1/-1}
+  .reqs dd:last-child{grid-column:1/-1}
+}
+.copy{border:1px solid var(--band-line);background:transparent;color:var(--band-ink);border-radius:999px;padding:6px 12px;min-height:34px;font:600 .82rem/1.2 var(--font-body);cursor:pointer;white-space:nowrap}
+.copy:hover:not(:disabled){background:var(--band)}
+.copy:disabled{opacity:.45;cursor:not-allowed}
+@media (min-width:960px){
+  .help-grid{grid-template-columns:minmax(0,1.25fr) minmax(0,1fr)}
+  .help-money{grid-row:span 2}
+}
+
+/* Transparency */
+.trust-grid{display:grid;gap:32px}
+.trust-list{list-style:none;padding:0;display:flex;flex-direction:column}
+.trust-list li{display:flex;gap:14px;align-items:flex-start;padding-block:18px;border-top:1px solid var(--line)}
+.trust-list svg{flex:none;width:24px;height:24px;margin-top:1px;fill:none;stroke:var(--sea);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.reports{margin-top:6px}
+@media (min-width:900px){.trust-grid{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:start}}
+
+/* FAQ */
+.faq{background:var(--salt-2)}
+.faq-list{max-width:860px;margin-top:36px;border-top:1px solid var(--line)}
+.faq-list details{border-bottom:1px solid var(--line)}
+.faq-list summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding-block:20px;font-weight:600;font-size:1.05rem}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::after{content:"";flex:none;width:11px;height:11px;margin:7px 6px 0 0;border-right:2px solid var(--sea);border-bottom:2px solid var(--sea);transform:rotate(45deg);transition:transform .2s ease}
+.faq-list details[open] summary::after{transform:translate(0,4px) rotate(-135deg)}
+.faq-list details p{padding-bottom:22px;color:var(--ink-soft);max-width:68ch}
+
+/* Contacts */
+.contacts-grid{display:grid;gap:0 36px;margin-top:36px}
+.contact{display:flex;flex-direction:column;gap:4px;padding-block:18px;border-top:1px solid var(--line);min-width:0}
+.contact dt{font:600 .78rem/1.2 var(--font-body);text-transform:uppercase;letter-spacing:.1em;color:var(--ink-soft)}
+.contact dd{font-size:1.1rem;font-weight:600;overflow-wrap:anywhere}
+.map-row{margin-top:24px}
+@media (min-width:700px){.contacts-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:1000px){.contacts-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+/* Footer */
+.site-footer{background:var(--band);color:var(--band-soft);padding-block:44px calc(44px + env(safe-area-inset-bottom,0px));font-size:.92rem}
+.site-footer a{color:var(--band-ink)}
+.foot-grid{display:grid;gap:24px}
+.foot-org{display:flex;flex-direction:column;gap:4px}
+.foot-name{font:600 1rem/1.3 var(--font-display);color:var(--band-ink)}
+@media (min-width:860px){.foot-grid{grid-template-columns:minmax(0,1fr) minmax(0,1.2fr) auto;align-items:start}}
+
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="skip">Перейти к содержанию</a>
+
+<header class="site-header" id="top">
+  <div class="wrap header-row">
+    <a class="brand" href="#top">
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><circle class="mk-sun" cx="32" cy="32" r="30"/><path class="mk-gull" d="M11 39C9 23 25 20 31 34C37 20 53 23 51 39"/></svg>
+      <span class="brand-text">
+        <span class="brand-name">Рахманбай</span>
+        <span class="brand-sub" data-i18n="brand_sub">благотворительный фонд · Аральск</span>
+      </span>
+    </a>
+    <nav class="site-nav" id="site-nav" aria-label="Основное меню" data-i18n-aria="nav_label">
+      <ul>
+        <li><a href="#about" data-i18n="nav_about">О фонде</a></li>
+        <li><a href="#programs" data-i18n="nav_programs">Программы</a></li>
+        <li><a href="#how" data-i18n="nav_how">Этапы</a></li>
+        <li><a href="#apply" data-i18n="nav_apply">Заявка</a></li>
+        <li><a href="#faq" data-i18n="nav_faq">Вопросы</a></li>
+        <li><a href="#contacts" data-i18n="nav_contacts">Контакты</a></li>
+        <li class="nav-help"><a href="#help" data-i18n="nav_help">Помочь фонду</a></li>
+      </ul>
+    </nav>
+    <div class="header-tools">
+      <div class="lang" role="group" aria-label="Язык сайта" data-i18n-aria="lang_label">
+        <button type="button" data-lang="kk" lang="kk" aria-pressed="false">ҚАЗ</button>
+        <button type="button" data-lang="ru" lang="ru" aria-pressed="true">РУС</button>
+      </div>
+      <a class="btn btn-sun btn-sm header-cta" href="#help" data-i18n="cta_help">Поддержать</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Меню" data-i18n-aria="menu_label"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow" data-i18n="hero_eyebrow">Фонд имени Рахмана Кадирханова · Аральск</p>
+      <h1 id="hero-title" data-i18n="hero_title">Оценка <span class="pen">«3»</span> — это начало пути</h1>
+      <p class="lead" data-i18n="hero_lead">Фонд «Рахманбай» помогает школьникам Аральска, которые учатся на «3». Мы бесплатно даём занятия с репетиторами, наставника и кружки, чтобы ребёнок подтянул учёбу, нашёл любимое дело и поверил в себя.</p>
+      <div class="cta-row">
+        <a class="btn btn-sea" href="#apply" data-i18n="hero_cta1">Подать заявку</a>
+        <a class="btn btn-ghost" href="#help" data-i18n="hero_cta2">Поддержать фонд</a>
+      </div>
+      <p class="hero-note" data-i18n="hero_note">Заявку может подать родитель, опекун или учитель.</p>
+    </div>
+    <figure class="hero-art">
+      <svg viewBox="0 0 500 420" role="img" aria-labelledby="art-title">
+        <title id="art-title" data-i18n="art_label">Цифра 3 поворачивается и становится чайкой над Аральским морем</title>
+        <defs>
+          <path id="three" d="M-16 -20C-12 -31 16 -33 16 -16C16 -6 6 -2 -2 -1C8 0 20 4 20 16C20 33 -10 35 -18 22"/>
+        </defs>
+        <rect class="a-sky" width="500" height="420"/>
+        <circle class="a-sun" cx="378" cy="118" r="58"/>
+        <path class="a-sea2" d="M0 238Q40 228 80 238T160 238T240 238T320 238T400 238T480 238T560 238V420H0Z"/>
+        <path class="a-sea" d="M0 272Q50 260 100 272T200 272T300 272T400 272T500 272V420H0Z"/>
+        <path class="a-sand" d="M0 326C90 314 170 336 250 368C290 384 318 402 336 420H0Z"/>
+        <g transform="translate(26 300) rotate(-6)">
+          <path class="a-ship" d="M0 30H100L87 50H11Z"/>
+          <path class="a-ship" d="M22 13H52V30H22Z"/>
+          <path class="a-rig" d="M72 30V2M72 4L95 28M72 4L56 13"/>
+        </g>
+        <use href="#three" class="t t-pen" transform="translate(150 238) scale(1.6)"/>
+        <use href="#three" class="t t-sea" transform="translate(236 176) rotate(-32) scale(1.12)"/>
+        <use href="#three" class="t t-sea" transform="translate(300 122) rotate(-62) scale(.8)"/>
+        <g class="bob"><use href="#three" class="t t-sun" transform="translate(380 112) rotate(-90) scale(.62)"/></g>
+        <g class="bob bob-2"><use href="#three" class="t t-gull" transform="translate(452 62) rotate(-90) scale(.42)"/></g>
+        <g class="bob"><use href="#three" class="t t-gull" transform="translate(452 190) rotate(-90) scale(.32)"/></g>
+      </svg>
+      <figcaption data-i18n="art_caption">Положите «3» набок, и получится чайка.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="promise" aria-label="Главное о фонде" data-i18n-aria="promise_label">
+  <div class="wrap promise-grid">
+    <div class="promise-item">
+      <span class="glyph" aria-hidden="true">0&nbsp;₸</span>
+      <div><strong data-i18n="p1_t">Бесплатно для семьи</strong><p data-i18n="p1_d">Занятия, кружки и материалы оплачивает фонд.</p></div>
+    </div>
+    <div class="promise-item">
+      <span class="glyph" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+      <div><strong data-i18n="p2_t">Рядом с домом</strong><p data-i18n="p2_d">Занятия проходят в Аральске.</p></div>
+    </div>
+    <div class="promise-item">
+      <span class="glyph glyph-small" aria-hidden="true">ҚАЗ<br>РУС</span>
+      <div><strong data-i18n="p3_t">На двух языках</strong><p data-i18n="p3_d">Занимаемся на казахском или русском, как удобнее ребёнку.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about" aria-labelledby="about-title">
+  <div class="wrap about-grid">
+    <div class="about-copy">
+      <p class="kicker" data-i18n="about_kicker">О фонде</p>
+      <h2 id="about-title" data-i18n="about_title">Почему мы помогаем детям с «тройками»</h2>
+      <p class="first" data-i18n="about_p1">Отличников замечают все: для них есть олимпиады, гранты и призы. Ребёнок, который учится на «3», часто остаётся в стороне. Хотя за тройкой обычно стоят простые причины: пропущенная тема, стеснение переспросить, большой класс, нет возможности заниматься дополнительно.</p>
+      <p data-i18n="about_p2">Оценка не определяет, кем станет ребёнок. Мы ищем сильные стороны каждого и помогаем там, где трудно. Мы не делим детей на «сильных» и «слабых».</p>
+      <div class="story" data-row>
+        <p class="story-label" data-i18n="story_label">Чьё имя носит фонд</p>
+        <p data-cfg="story"></p>
+      </div>
+    </div>
+    <aside class="aral-note" aria-labelledby="aral-title">
+      <p class="kicker" data-i18n="aral_kicker">Арал</p>
+      <h3 id="aral-title" data-i18n="aral_title">Море тоже возвращается</h3>
+      <p data-i18n="aral_text">После того как в 2005 году построили Кокаральскую плотину, вода в Малом Арале поднялась, и в море вернулась рыба. На это ушли годы упорной работы. С учёбой так же: постепенно, шаг за шагом.</p>
+      <svg viewBox="0 0 400 64" preserveAspectRatio="none" aria-hidden="true"><path class="w1" d="M0 26Q50 10 100 26T200 26T300 26T400 26V64H0Z"/><path class="w2" d="M0 42Q50 28 100 42T200 42T300 42T400 42V64H0Z"/></svg>
+    </aside>
+  </div>
+</section>
+
+<section class="section" id="programs" aria-labelledby="programs-title" style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <p class="kicker" data-i18n="prog_kicker">Программы</p>
+      <h2 id="programs-title" data-i18n="prog_title">Чем мы помогаем</h2>
+      <p class="lead" data-i18n="prog_lead">Для каждого ребёнка мы собираем свой набор поддержки. Вот из чего он складывается.</p>
+    </div>
+    <div class="prog-grid">
+      <article class="prog">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5C5.5 4.5 8.5 4.5 12 6.5v13c-3.5-2-6.5-2-9-1z"/><path d="M21 5.5c-2.5-1-5.5-1-9 1v13c3.5-2 6.5-2 9-1z"/></svg>
+        <h3 data-i18n="prog1_t">Занятия с репетитором</h3>
+        <p data-i18n="prog1_d">Математика, казахский, русский и английский языки. Индивидуально или в мини-группе после уроков.</p>
+      </article>
+      <article class="prog">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="8" r="3"/><circle cx="16.5" cy="9.5" r="2.5"/><path d="M2.5 20c.6-3.6 2.9-5.5 5.5-5.5s4.9 1.9 5.5 5.5"/><path d="M14.5 15.2c.6-.2 1.3-.3 2-.3 2.3 0 4.2 1.6 4.8 4.6"/></svg>
+        <h3 data-i18n="prog2_t">Наставник</h3>
+        <p data-i18n="prog2_d">Взрослый, который на связи каждую неделю: помогает с планом, подбадривает и замечает успехи.</p>
+      </article>
+      <article class="prog">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg>
+        <h3 data-i18n="prog3_t">Кружки и таланты</h3>
+        <p data-i18n="prog3_d">Спорт, робототехника, рисование, домбра, шахматы. Оплачиваем занятия, чтобы ребёнок нашёл то, что у него хорошо получается.</p>
+      </article>
+      <article class="prog">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5h18"/><path d="M4 20.5v-4h4.5v-4.5H13V7.5h4.5V3.5"/><path d="M14.8 3.5h2.7v2.7"/></svg>
+        <h3 data-i18n="prog4_t">Стипендия за рост</h3>
+        <p data-i18n="prog4_d">Отмечаем тех, кто улучшил оценки или сделал заметный шаг в любимом деле. Для этого не нужно получать пятёрки.</p>
+      </article>
+      <article class="prog">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 10a6 6 0 0 1 12 0v9a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z"/><path d="M9.5 4.6V4a2.5 2.5 0 0 1 5 0v.6"/><path d="M9 14h6v4H9z"/></svg>
+        <h3 data-i18n="prog5_t">Всё для школы</h3>
+        <p data-i18n="prog5_d">Рюкзак, канцелярия и школьная форма к 1 сентября для семей, которым сейчас трудно.</p>
+      </article>
+      <article class="prog">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg>
+        <h3 data-i18n="prog6_t">Выбор профессии</h3>
+        <p data-i18n="prog6_d">Встречи с людьми разных профессий, экскурсии и помощь старшеклассникам с выбором колледжа или вуза.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section how" id="how" aria-labelledby="how-title">
+  <div class="wrap">
+    <div class="head">
+      <p class="kicker" data-i18n="how_kicker">Как это работает</p>
+      <h2 id="how-title" data-i18n="how_title">От заявки до первых успехов</h2>
+    </div>
+    <ol class="steps">
+      <li class="step"><h3 data-i18n="s1_t">Заявка</h3><p data-i18n="s1_d">Родитель или учитель заполняет форму на сайте или пишет нам в WhatsApp.</p></li>
+      <li class="step"><h3 data-i18n="s2_t">Знакомство</h3><p data-i18n="s2_d">Встречаемся с ребёнком и родителями. Говорим о том, что трудно и что нравится.</p></li>
+      <li class="step"><h3 data-i18n="s3_t">Личный план</h3><p data-i18n="s3_d">Выбираем предметы, репетитора, наставника и кружок.</p></li>
+      <li class="step"><h3 data-i18n="s4_t">Занятия</h3><p data-i18n="s4_d">Ребёнок занимается весь учебный год. Наставник всегда на связи.</p></li>
+      <li class="step"><h3 data-i18n="s5_t">Итоги четверти</h3><p data-i18n="s5_d">Каждую четверть вместе с семьёй смотрим на прогресс и при необходимости меняем план.</p></li>
+    </ol>
+    <div class="who">
+      <div>
+        <h3 data-i18n="who_title">Кто может участвовать</h3>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px;min-width:0">
+        <ul class="checks">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.6 2.6L16 9.6"/></svg><span data-i18n="who1">Ученики 2–11 классов школ Аральска и Аральского района.</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.6 2.6L16 9.6"/></svg><span data-i18n="who2">Есть оценки «3» по одному или нескольким предметам.</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.6 2.6L16 9.6"/></svg><span data-i18n="who3">Заявку подаёт родитель, опекун или учитель с согласия родителей.</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.6 2.6L16 9.6"/></svg><span data-i18n="who4">Для семьи участие бесплатное.</span></li>
+        </ul>
+        <p class="who-note" data-i18n="who_note">В 1 классе оценки не ставят, поэтому программа начинается со 2 класса.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="apply" aria-labelledby="apply-title">
+  <div class="wrap apply-grid">
+    <div class="apply-side">
+      <p class="kicker" data-i18n="apply_kicker">Заявка</p>
+      <h2 id="apply-title" data-i18n="apply_title">Расскажите о ребёнке</h2>
+      <p class="lead" data-i18n="apply_lead">Заполните форму. Сайт соберёт текст заявки, а вы отправите его нам в WhatsApp. Это займёт около пяти минут.</p>
+      <div class="next">
+        <h3 data-i18n="next_t">Что будет дальше</h3>
+        <ol>
+          <li data-i18n="next1">Мы прочитаем заявку и позвоним вам.</li>
+          <li data-i18n="next2">Договоримся о знакомстве с ребёнком.</li>
+          <li data-i18n="next3">Вместе составим личный план.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div>
+      <form id="apply-form" class="form" novalidate>
+        <div class="form-grid">
+          <div class="field">
+            <label for="f-parent"><span data-i18n="f_parent">Ваше имя</span> <span class="req" aria-hidden="true">*</span></label>
+            <input id="f-parent" name="parent" type="text" autocomplete="name" required aria-describedby="e-parent">
+            <p class="err" id="e-parent" hidden></p>
+          </div>
+          <div class="field">
+            <label for="f-phone"><span data-i18n="f_phone">Телефон</span> <span class="req" aria-hidden="true">*</span></label>
+            <input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 7XX XXX XX XX" required aria-describedby="h-phone e-phone">
+            <p class="hint" id="h-phone" data-i18n="f_phone_hint">Лучше номер, на котором есть WhatsApp.</p>
+            <p class="err" id="e-phone" hidden></p>
+          </div>
+          <div class="field">
+            <label for="f-child"><span data-i18n="f_child">Имя ребёнка</span> <span class="req" aria-hidden="true">*</span></label>
+            <input id="f-child" name="child" type="text" autocomplete="off" required aria-describedby="e-child">
+            <p class="err" id="e-child" hidden></p>
+          </div>
+          <div class="field">
+            <label for="f-grade"><span data-i18n="f_grade">Класс</span> <span class="req" aria-hidden="true">*</span></label>
+            <select id="f-grade" name="grade" required aria-describedby="e-grade">
+              <option value="">Выберите класс</option>
+              <option value="2">2 класс</option><option value="3">3 класс</option><option value="4">4 класс</option>
+              <option value="5">5 класс</option><option value="6">6 класс</option><option value="7">7 класс</option>
+              <option value="8">8 класс</option><option value="9">9 класс</option><option value="10">10 класс</option>
+              <option value="11">11 класс</option>
+            </select>
+            <p class="err" id="e-grade" hidden></p>
+          </div>
+          <div class="field field-full">
+            <label for="f-school"><span data-i18n="f_school">Школа</span> <span class="req" aria-hidden="true">*</span></label>
+            <input id="f-school" name="school" type="text" autocomplete="off" required placeholder="Номер или название школы" data-i18n-ph="f_school_ph" aria-describedby="e-school">
+            <p class="err" id="e-school" hidden></p>
+          </div>
+          <fieldset class="field field-full">
+            <legend data-i18n="f_subjects">Какие предметы даются трудно</legend>
+            <div class="chips">
+              <label class="chip"><input type="checkbox" name="subjects" id="s-math" value="math"><span data-i18n="subj_math">Математика</span></label>
+              <label class="chip"><input type="checkbox" name="subjects" id="s-kaz" value="kaz"><span data-i18n="subj_kaz">Казахский язык</span></label>
+              <label class="chip"><input type="checkbox" name="subjects" id="s-rus" value="rus"><span data-i18n="subj_rus">Русский язык</span></label>
+              <label class="chip"><input type="checkbox" name="subjects" id="s-eng" value="eng"><span data-i18n="subj_eng">Английский язык</span></label>
+              <label class="chip"><input type="checkbox" name="subjects" id="s-phys" value="phys"><span data-i18n="subj_phys">Физика</span></label>
+              <label class="chip"><input type="checkbox" name="subjects" id="s-chem" value="chem"><span data-i18n="subj_chem">Химия</span></label>
+              <label class="chip"><input type="checkbox" name="subjects" id="s-bio" value="bio"><span data-i18n="subj_bio">Биология</span></label>
+              <label class="chip"><input type="checkbox" name="subjects" id="s-hist" value="hist"><span data-i18n="subj_hist">История</span></label>
+              <label class="chip"><input type="checkbox" name="subjects" id="s-other" value="other"><span data-i18n="subj_other">Другое</span></label>
+            </div>
+          </fieldset>
+          <div class="field field-full">
+            <label for="f-talents" data-i18n="f_talents">Что ребёнку нравится, что у него получается</label>
+            <textarea id="f-talents" name="talents" rows="3" aria-describedby="h-talents"></textarea>
+            <p class="hint" id="h-talents" data-i18n="f_talents_hint">Это важно: мы ищем сильные стороны, а не только пробелы.</p>
+          </div>
+          <div class="field field-full">
+            <label for="f-concern"><span data-i18n="f_concern">Что беспокоит в учёбе</span> <span class="opt" data-i18n="opt">(необязательно)</span></label>
+            <textarea id="f-concern" name="concern" rows="3"></textarea>
+          </div>
+          <div class="field">
+            <label for="f-source"><span data-i18n="f_source">Как вы узнали о фонде</span> <span class="opt" data-i18n="opt">(необязательно)</span></label>
+            <select id="f-source" name="source">
+              <option value="" data-i18n="src_none">Не выбрано</option>
+              <option value="school" data-i18n="src_school">В школе</option>
+              <option value="friends" data-i18n="src_friends">От знакомых</option>
+              <option value="social" data-i18n="src_social">Instagram или WhatsApp</option>
+              <option value="other" data-i18n="src_other">Другое</option>
+            </select>
+          </div>
+          <div class="field field-full check">
+            <input type="checkbox" id="f-consent" name="consent" required aria-describedby="e-consent">
+            <label for="f-consent"><span data-i18n="f_consent">Даю согласие на обработку моих персональных данных и данных ребёнка, чтобы фонд рассмотрел заявку.</span> <span class="req" aria-hidden="true">*</span></label>
+            <p class="err" id="e-consent" hidden></p>
+          </div>
+        </div>
+        <div class="form-foot">
+          <button class="btn btn-sea" type="submit" data-i18n="f_submit">Подготовить заявку</button>
+          <p class="form-note" data-i18n="f_required_note">Поля со звёздочкой (*) обязательны.</p>
+        </div>
+        <p class="form-summary" id="form-summary" role="alert" hidden></p>
+      </form>
+
+      <div class="result" id="result" tabindex="-1" hidden>
+        <h3 data-i18n="res_title">Заявка готова</h3>
+        <p id="result-hint"></p>
+        <label class="sr-only" for="result-text" data-i18n="res_text_label">Текст заявки</label>
+        <textarea id="result-text" readonly rows="10"></textarea>
+        <div class="cta-row">
+          <a class="btn btn-sea" id="result-wa" target="_blank" rel="noopener" hidden data-i18n="res_wa">Отправить в WhatsApp</a>
+          <button class="btn btn-ghost" id="result-copy" type="button" data-i18n="res_copy">Скопировать текст</button>
+          <button class="btn-link" id="result-edit" type="button" data-i18n="res_edit">Изменить заявку</button>
+        </div>
+        <p class="status" id="result-status" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="help" aria-labelledby="help-title">
+  <svg class="band-edge top" viewBox="0 0 1440 48" preserveAspectRatio="none" aria-hidden="true"><path d="M0 48V26Q120 4 240 26T480 26T720 26T960 26T1200 26T1440 26V48Z"/></svg>
+  <div class="wrap">
+    <div class="head">
+      <p class="kicker" data-i18n="help_kicker">Как помочь</p>
+      <h2 id="help-title" data-i18n="help_title">Поддержите детей Аральска</h2>
+      <p class="lead" data-i18n="help_lead">Помочь можно деньгами, временем или знаниями. Каждый вклад идёт на занятия, кружки и всё, что нужно детям для учёбы.</p>
+    </div>
+    <div class="help-grid">
+      <article class="help-card help-money">
+        <h3 data-i18n="money_t">Пожертвование</h3>
+        <p data-i18n="money_d">Переведите любую сумму через Kaspi или по банковским реквизитам. В назначении платежа напишите «Благотворительная помощь».</p>
+        <div class="money-details" id="g-money" data-group>
+          <div class="kaspi" data-row>
+            <p class="kaspi-label" data-i18n="kaspi_label">Kaspi, перевод по номеру телефона</p>
+            <div class="copy-row">
+              <span class="mono" id="v-kaspi" data-cfg="kaspiPhone"></span>
+              <button class="copy" type="button" data-copy="kaspiPhone" data-target="v-kaspi" data-i18n="copy_btn">Копировать</button>
+            </div>
+          </div>
+          <div class="reqs-wrap" data-group>
+            <h4 data-i18n="req_title">Банковские реквизиты</h4>
+            <dl class="reqs">
+              <div data-row><dt data-i18n="req_recipient">Получатель</dt><dd data-cfg="bank.recipient"></dd></div>
+              <div data-row><dt data-i18n="req_bin">БИН</dt><dd id="v-bin" data-cfg="bank.bin"></dd><dd class="copy-cell"><button class="copy" type="button" data-copy="bank.bin" data-target="v-bin" data-i18n="copy_btn">Копировать</button></dd></div>
+              <div data-row><dt data-i18n="req_iban">ИИК (IBAN)</dt><dd id="v-iban" data-cfg="bank.iban"></dd><dd class="copy-cell"><button class="copy" type="button" data-copy="bank.iban" data-target="v-iban" data-i18n="copy_btn">Копировать</button></dd></div>
+              <div data-row><dt data-i18n="req_bank">Банк</dt><dd data-cfg="bank.bank"></dd></div>
+              <div data-row><dt data-i18n="req_bik">БИК</dt><dd id="v-bik" data-cfg="bank.bik"></dd><dd class="copy-cell"><button class="copy" type="button" data-copy="bank.bik" data-target="v-bik" data-i18n="copy_btn">Копировать</button></dd></div>
+              <div data-row><dt data-i18n="req_kbe">Кбе</dt><dd data-cfg="bank.kbe"></dd></div>
+              <div data-row><dt data-i18n="req_knp">КНП</dt><dd data-cfg="bank.knp"></dd></div>
+            </dl>
+          </div>
+        </div>
+        <p class="soon" data-soon-for="g-money" data-i18n="money_soon">Реквизиты для пожертвований появятся здесь в ближайшее время.</p>
+      </article>
+      <article class="help-card">
+        <h3 data-i18n="time_t">Время и знания</h3>
+        <p data-i18n="time_d">Станьте наставником или репетитором. Нам подойдут студенты, учителя, специалисты из Аральска и аральцы, которые живут в других городах: многие занятия можно вести онлайн.</p>
+        <div class="cta-row"><a class="btn btn-sun" href="#contacts" data-wa="wa_mentor" data-i18n="time_cta">Стать наставником</a></div>
+      </article>
+      <article class="help-card">
+        <h3 data-i18n="biz_t">Для бизнеса</h3>
+        <p data-i18n="biz_d">Оплатите кружок для группы детей, учредите стипендию за рост или купите школьные наборы. Мы расскажем, на что пошли средства.</p>
+        <div class="cta-row"><a class="btn btn-ghost-light" href="#contacts" data-wa="wa_biz" data-i18n="biz_cta">Обсудить партнёрство</a></div>
+      </article>
+    </div>
+  </div>
+  <svg class="band-edge bottom" viewBox="0 0 1440 48" preserveAspectRatio="none" aria-hidden="true"><path d="M0 48V26Q120 4 240 26T480 26T720 26T960 26T1200 26T1440 26V48Z"/></svg>
+</section>
+
+<section class="section" id="reports" aria-labelledby="trust-title">
+  <div class="wrap trust-grid">
+    <div class="head">
+      <p class="kicker" data-i18n="trust_kicker">Прозрачность</p>
+      <h2 id="trust-title" data-i18n="trust_title">Вы увидите, на что ушли деньги</h2>
+      <p class="lead" data-i18n="trust_lead">Фонд живёт на пожертвования, поэтому мы отчитываемся открыто.</p>
+      <p class="reports">
+        <a class="btn btn-sea" id="reports-link" target="_blank" rel="noopener" hidden data-i18n="trust_cta">Отчёты фонда</a>
+        <span class="soon" id="reports-soon" data-i18n="trust_soon">Первый отчёт опубликуем по итогам первой четверти работы.</span>
+      </p>
+    </div>
+    <ul class="trust-list">
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.6 2.6L16 9.6"/></svg><span data-i18n="trust1">Каждую четверть публикуем отчёт: сколько детей занимается, по каким программам и сколько это стоило.</span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.6 2.6L16 9.6"/></svg><span data-i18n="trust2">Раз в год выкладываем финансовый отчёт фонда.</span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.6 2.6L16 9.6"/></svg><span data-i18n="trust3">Не публикуем оценки, фамилии и фото детей без письменного согласия родителей.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section faq" id="faq" aria-labelledby="faq-title">
+  <div class="wrap">
+    <div class="head">
+      <p class="kicker" data-i18n="faq_kicker">Вопросы</p>
+      <h2 id="faq-title" data-i18n="faq_title">Частые вопросы</h2>
+    </div>
+    <div class="faq-list">
+      <details><summary data-i18n="q1">Это правда бесплатно?</summary><p data-i18n="a1">Да. Семья ничего не платит. Занятия, кружки и материалы оплачиваются из пожертвований.</p></details>
+      <details><summary data-i18n="q2">У ребёнка «3» только по одному предмету. Можно подать заявку?</summary><p data-i18n="a2">Да. Поможем именно с этим предметом и заодно найдём занятие, которое ребёнку по душе.</p></details>
+      <details><summary data-i18n="q3">Ребёнку не будет неловко перед одноклассниками?</summary><p data-i18n="a3">Мы не вешаем на детей ярлыков и не публикуем их оценки и фото. Занятия проходят в небольших группах, и для ребёнка это обычный кружок после уроков.</p></details>
+      <details><summary data-i18n="q4">На каком языке занятия?</summary><p data-i18n="a4">На казахском или русском, на том языке, на котором ребёнок учится в школе.</p></details>
+      <details><summary data-i18n="q5">Где проходят занятия?</summary><p data-i18n="a5">В Аральске. Точный адрес мы сообщим при знакомстве. Часть встреч с наставниками проходит онлайн.</p></details>
+      <details><summary data-i18n="q6">Сколько длится участие?</summary><p data-i18n="a6">Обычно учебный год. Каждую четверть мы вместе с семьёй смотрим на результаты и решаем, что делать дальше.</p></details>
+      <details><summary data-i18n="q7">Как убедиться, что пожертвование дошло до детей?</summary><p data-i18n="a7">Мы публикуем отчёт каждую четверть и финансовый отчёт раз в год. Можно написать нам и спросить, на что пошли ваши деньги.</p></details>
+      <details><summary data-i18n="q8">Можно помочь не деньгами?</summary><p data-i18n="a8">Да. Нужны наставники, репетиторы, люди, готовые провести мастер-класс или рассказать о своей профессии, а также канцтовары и спортивный инвентарь.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contacts" aria-labelledby="contacts-title">
+  <div class="wrap">
+    <div class="head">
+      <p class="kicker" data-i18n="contacts_kicker">Контакты</p>
+      <h2 id="contacts-title" data-i18n="contacts_title">Напишите или позвоните нам</h2>
+      <p class="lead" data-i18n="contacts_lead">Ответим на казахском или русском.</p>
+    </div>
+    <dl class="contacts-grid">
+      <div class="contact" data-row><dt data-i18n="c_hours">Часы работы</dt><dd data-cfg="hours"></dd></div>
+      <div class="contact" data-row><dt data-i18n="c_address">Адрес</dt><dd data-cfg="address"></dd></div>
+      <div class="contact" data-row><dt data-i18n="c_phone">Телефон</dt><dd data-cfg="phone" data-link></dd></div>
+      <div class="contact" data-row><dt>WhatsApp</dt><dd data-cfg="whatsapp" data-link></dd></div>
+      <div class="contact" data-row><dt data-i18n="c_email">Почта</dt><dd data-cfg="email" data-link></dd></div>
+      <div class="contact" data-row><dt>Instagram</dt><dd data-cfg="instagram" data-link></dd></div>
+      <div class="contact" data-row><dt>Telegram</dt><dd data-cfg="telegram" data-link></dd></div>
+    </dl>
+    <p class="soon" id="contacts-soon" data-i18n="contacts_soon">Телефон, WhatsApp и адрес фонда появятся здесь в ближайшее время.</p>
+    <p class="map-row"><a class="btn btn-ghost" id="map-link" target="_blank" rel="noopener" hidden data-i18n="c_map">Открыть на карте</a></p>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap foot-grid">
+    <div class="foot-org">
+      <p class="foot-name" data-i18n="foot_name">Благотворительный фонд «Рахманбай»</p>
+      <p data-i18n="foot_named">имени Рахмана Кадирханова</p>
+      <p data-row data-cfg="orgFullName"></p>
+      <p data-row><span data-i18n="foot_bin">БИН</span>: <span data-cfg="bin"></span></p>
+      <p>© <span id="year">2026</span></p>
+    </div>
+    <p data-i18n="foot_privacy">Данные из формы заявки используются только для связи с семьёй и не передаются третьим лицам.</p>
+    <p><a href="#top" data-i18n="foot_top">Наверх</a></p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ================================================================
+     НАСТРОЙКИ ФОНДА — заполните значения.
+     Пустая строка = на сайте видна подсказка в квадратных скобках.
+     ================================================================ */
+  var CONFIG = {
+    orgFullName: '',              // полное юридическое наименование
+    bin: '',                      // БИН фонда, 12 цифр
+    story: {                      // 1–2 предложения об истории фонда
+      ru: 'Фонд носит имя Рахмана Кадирханова. Он отличный троечник, лидер троечников и их достойный представитель.',
+      kk: 'Қор Рахман Кадирхановтың есімімен аталған. Ол «3»-ке оқитындардың үздігі, көшбасшысы әрі лайықты өкілі.'
+    },
+    address: { ru: '', kk: '' },  // напр. 'г. Аральск, ул. ..., дом ...'
+    hours: {
+      ru: 'Вечером, с 20:00 до 03:00',
+      kk: 'Кешкі 20:00-ден түнгі 03:00-ге дейін'
+    },
+    phone: '',                    // '+7 7XX XXX XX XX'
+    whatsapp: '',                 // номер WhatsApp фонда: '+7 7XX XXX XX XX' или '77XXXXXXXXX'
+    email: '',
+    instagram: '',                // имя аккаунта без @
+    telegram: '',                 // имя канала без @
+    kaspiPhone: '',               // номер для переводов в Kaspi
+    bank: {
+      recipient: '',              // получатель, как в банке
+      bin: '',
+      iban: '',                   // KZ + 18 знаков
+      bank: '',
+      bik: '',
+      kbe: '',                    // для некоммерческой организации обычно 18 — уточните в банке
+      knp: ''                     // для благотворительной помощи обычно 119 — уточните в банке
+    },
+    reportsUrl: '',               // ссылка на папку с отчётами (Google Диск и т. п.)
+    mapUrl: ''                    // ссылка на 2ГИС или Google Maps
+  };
+
+  /* Казахский перевод текстов страницы. Русский текст берётся из HTML. */
+  var KK = {
+    doc_title: '«Рахманбай» қоры',
+    doc_desc: 'Арал қаласындағы «Рахманбай» қайырымдылық қоры «3»-ке оқитын оқушыларға көмектеседі: тегін репетитор сабақтары, тәлімгерлер, үйірмелер және отбасына қолдау.',
+    skip: 'Негізгі мазмұнға өту',
+    brand_sub: 'қайырымдылық қоры · Арал',
+    nav_label: 'Негізгі мәзір',
+    nav_about: 'Қор туралы',
+    nav_programs: 'Бағдарламалар',
+    nav_how: 'Кезеңдер',
+    nav_apply: 'Өтінім',
+    nav_faq: 'Сұрақтар',
+    nav_contacts: 'Байланыс',
+    nav_help: 'Қорға көмектесу',
+    lang_label: 'Сайт тілі',
+    cta_help: 'Қолдау',
+    menu_label: 'Мәзір',
+    hero_eyebrow: 'Рахман Кадирханов атындағы қор · Арал',
+    hero_title: '<span class="pen">«3»</span> деген баға — жолдың басы',
+    hero_lead: '«Рахманбай» қоры «3»-ке оқитын Арал оқушыларына көмектеседі. Бала сабағын жақсартып, ұнайтын ісін тауып, өз күшіне сенуі үшін репетитор сабақтарын, тәлімгер мен үйірмелерді тегін ұйымдастырамыз.',
+    hero_cta1: 'Өтінім беру',
+    hero_cta2: 'Қорды қолдау',
+    hero_note: 'Өтінімді ата-ана, қамқоршы немесе мұғалім бере алады.',
+    art_label: '3 саны бұрылып, Арал теңізінің үстінде ұшқан шағалаға айналады',
+    art_caption: '«3» санын жанына жатқызсаңыз, шағала шығады.',
+    promise_label: 'Қор туралы басты мәлімет',
+    p1_t: 'Отбасы үшін тегін',
+    p1_d: 'Сабақтар, үйірмелер мен оқу құралдарын қор төлейді.',
+    p2_t: 'Үйге жақын',
+    p2_d: 'Сабақтар Арал қаласында өтеді.',
+    p3_t: 'Екі тілде',
+    p3_d: 'Балаға ыңғайлы тілде, қазақша немесе орысша оқытамыз.',
+    about_kicker: 'Қор туралы',
+    about_title: 'Неліктен «3» алатын балаларға көмектесеміз',
+    about_p1: 'Үздік оқушыларды бәрі байқайды: оларға арналған олимпиадалар, гранттар мен жүлделер бар. Ал «3»-ке оқитын бала көбіне назардан тыс қалады. Алайда «үштіктің» артында әдетте қарапайым себептер жатады: түсінбей қалған тақырып, қайта сұраудан ұялу, сыныптағы оқушының көптігі, қосымша оқуға мүмкіндіктің болмауы.',
+    about_p2: 'Баға баланың кім болатынын анықтамайды. Біз әр баланың мықты тұсын іздеп, қиналған жерінде қолдау көрсетеміз. Балаларды «күшті» және «әлсіз» деп бөлмейміз.',
+    story_label: 'Қор кімнің есімімен аталған',
+    aral_kicker: 'Арал',
+    aral_title: 'Теңіз де қайта оралады',
+    aral_text: '2005 жылы Көкарал бөгені салынғаннан кейін Кіші Аралдың суы көтеріліп, теңізге балық қайта оралды. Бұл жылдарға созылған табанды еңбектің нәтижесі. Оқуда да солай: біртіндеп, қадам сайын.',
+    prog_kicker: 'Бағдарламалар',
+    prog_title: 'Қалай көмектесеміз',
+    prog_lead: 'Әр балаға жеке қолдау жиынтығын құрамыз. Ол мына бөліктерден тұрады.',
+    prog1_t: 'Репетитормен сабақ',
+    prog1_d: 'Математика, қазақ, орыс және ағылшын тілдері. Сабақтан кейін жеке немесе шағын топпен.',
+    prog2_t: 'Тәлімгер',
+    prog2_d: 'Апта сайын хабарласып тұратын ересек адам: жоспар құруға көмектеседі, қолдау білдіреді, жетістікті байқайды.',
+    prog3_t: 'Үйірме және талант',
+    prog3_d: 'Спорт, робототехника, сурет салу, домбыра, шахмат. Бала өзі мықты болатын ісін табуы үшін үйірме ақысын төлейміз.',
+    prog4_t: 'Өсу стипендиясы',
+    prog4_d: 'Бағасын жақсартқан немесе сүйікті ісінде елеулі қадам жасаған балаларды марапаттаймыз. Ол үшін «5» алу міндетті емес.',
+    prog5_t: 'Мектепке қажеттің бәрі',
+    prog5_d: 'Қазір қиын жағдайдағы отбасыларға 1 қыркүйекке сөмке, кеңсе тауарлары және мектеп формасы.',
+    prog6_t: 'Мамандық таңдау',
+    prog6_d: 'Түрлі мамандық иелерімен кездесулер, экскурсиялар, жоғары сынып оқушыларына колледж немесе жоғары оқу орнын таңдауға көмек.',
+    how_kicker: 'Қалай жұмыс істейміз',
+    how_title: 'Өтінімнен алғашқы жетістікке дейін',
+    s1_t: 'Өтінім',
+    s1_d: 'Ата-ана немесе мұғалім сайттағы форманы толтырады немесе бізге WhatsApp-қа жазады.',
+    s2_t: 'Танысу',
+    s2_d: 'Баламен және ата-анасымен кездесеміз. Не қиын, не ұнайтынын сөйлесеміз.',
+    s3_t: 'Жеке жоспар',
+    s3_d: 'Пәндерді, репетиторды, тәлімгерді және үйірмені таңдаймыз.',
+    s4_t: 'Сабақтар',
+    s4_d: 'Бала оқу жылы бойы айналысады. Тәлімгер үнемі байланыста.',
+    s5_t: 'Тоқсан қорытындысы',
+    s5_d: 'Әр тоқсан сайын отбасымен бірге нәтижені қарап, қажет болса жоспарды өзгертеміз.',
+    who_title: 'Кімдер қатыса алады',
+    who1: 'Арал қаласы мен Арал ауданындағы мектептердің 2–11-сынып оқушылары.',
+    who2: 'Бір немесе бірнеше пәннен «3» бағасы бар.',
+    who3: 'Өтінімді ата-ана, қамқоршы немесе ата-ананың келісімімен мұғалім береді.',
+    who4: 'Отбасы үшін қатысу тегін.',
+    who_note: '1-сыныпта баға қойылмайды, сондықтан бағдарлама 2-сыныптан басталады.',
+    apply_kicker: 'Өтінім',
+    apply_title: 'Бала туралы айтып беріңіз',
+    apply_lead: 'Форманы толтырыңыз. Сайт өтінім мәтінін дайындайды, ал сіз оны бізге WhatsApp арқылы жібересіз. Бұған бес минуттай уақыт кетеді.',
+    next_t: 'Әрі қарай не болады',
+    next1: 'Өтінімді оқып, сізге қоңырау шаламыз.',
+    next2: 'Баламен танысу уақытын келісеміз.',
+    next3: 'Бірге жеке жоспар құрамыз.',
+    f_parent: 'Сіздің атыңыз',
+    f_phone: 'Телефон',
+    f_phone_hint: 'WhatsApp орнатылған нөмір болғаны жақсы.',
+    f_child: 'Баланың аты',
+    f_grade: 'Сынып',
+    f_school: 'Мектеп',
+    f_school_ph: 'Мектептің нөмірі немесе атауы',
+    f_subjects: 'Қай пәндер қиын',
+    subj_math: 'Математика',
+    subj_kaz: 'Қазақ тілі',
+    subj_rus: 'Орыс тілі',
+    subj_eng: 'Ағылшын тілі',
+    subj_phys: 'Физика',
+    subj_chem: 'Химия',
+    subj_bio: 'Биология',
+    subj_hist: 'Тарих',
+    subj_other: 'Басқа',
+    f_talents: 'Балаға не ұнайды, неге икемі бар',
+    f_talents_hint: 'Бұл маңызды: біз тек кемшілікті емес, мықты тұсты да іздейміз.',
+    f_concern: 'Оқуда не алаңдатады',
+    opt: '(міндетті емес)',
+    f_source: 'Қор туралы қайдан білдіңіз',
+    src_none: 'Таңдалмаған',
+    src_school: 'Мектептен',
+    src_friends: 'Таныстардан',
+    src_social: 'Instagram немесе WhatsApp',
+    src_other: 'Басқа',
+    f_consent: 'Өтінімді қарау үшін менің және баламның дербес деректерін өңдеуге келісім беремін.',
+    f_submit: 'Өтінімді дайындау',
+    f_required_note: '(*) белгісі бар өрістер міндетті.',
+    res_title: 'Өтінім дайын',
+    res_text_label: 'Өтінім мәтіні',
+    res_wa: 'WhatsApp-қа жіберу',
+    res_copy: 'Мәтінді көшіру',
+    res_edit: 'Өтінімді өзгерту',
+    help_kicker: 'Қалай көмектесуге болады',
+    help_title: 'Арал балаларына қолдау көрсетіңіз',
+    help_lead: 'Қаржымен, уақытыңызбен немесе біліміңізбен көмектесе аласыз. Әр үлес сабақтарға, үйірмелерге және балалардың оқуына қажетті заттарға жұмсалады.',
+    money_t: 'Қайырымдылық жарна',
+    money_d: 'Kaspi арқылы немесе банк деректемелері бойынша кез келген соманы аударыңыз. Төлем мақсатына «Қайырымдылық көмек» деп жазыңыз.',
+    kaspi_label: 'Kaspi, телефон нөмірі бойынша аударым',
+    copy_btn: 'Көшіру',
+    req_title: 'Банк деректемелері',
+    req_recipient: 'Алушы',
+    req_bin: 'БСН',
+    req_iban: 'ЖСК (IBAN)',
+    req_bank: 'Банк',
+    req_bik: 'БСК',
+    req_kbe: 'ТБе',
+    req_knp: 'ТМК',
+    time_t: 'Уақыт және білім',
+    time_d: 'Тәлімгер немесе репетитор болыңыз. Студенттер, мұғалімдер, Арал мамандары және басқа қалаларда тұратын аралдықтар да қатыса алады: көп сабақты онлайн өткізуге болады.',
+    time_cta: 'Тәлімгер болу',
+    biz_t: 'Бизнес үшін',
+    biz_d: 'Балалар тобының үйірме ақысын төлеңіз, өсу стипендиясын тағайындаңыз немесе мектеп жиынтықтарын алып беріңіз. Қаражаттың неге жұмсалғанын хабарлап отырамыз.',
+    biz_cta: 'Серіктестікті талқылау',
+    trust_kicker: 'Ашықтық',
+    trust_title: 'Қаражаттың неге жұмсалғанын көресіз',
+    trust_lead: 'Қор қайырымдылық қаражатымен жұмыс істейді, сондықтан есепті ашық береміз.',
+    trust_cta: 'Қор есептері',
+    trust1: 'Әр тоқсан сайын есеп жариялаймыз: қанша бала оқиды, қай бағдарламалар бойынша және оған қанша қаражат жұмсалды.',
+    trust2: 'Жылына бір рет қордың қаржылық есебін жариялаймыз.',
+    trust3: 'Ата-ананың жазбаша келісімінсіз балалардың бағасын, тегін және суретін жарияламаймыз.',
+    faq_kicker: 'Сұрақтар',
+    faq_title: 'Жиі қойылатын сұрақтар',
+    q1: 'Бұл шынымен тегін бе?',
+    a1: 'Иә. Отбасы ештеңе төлемейді. Сабақтар, үйірмелер мен оқу құралдары қайырымдылық қаражатынан төленеді.',
+    q2: 'Баланың бір ғана пәннен «3» бағасы бар. Өтінім беруге бола ма?',
+    a2: 'Иә. Дәл сол пән бойынша көмектесеміз, сонымен қатар балаға ұнайтын іс табамыз.',
+    q3: 'Бала сыныптастарының алдында ыңғайсызданбай ма?',
+    a3: 'Біз балаларға таңба таспаймыз, олардың бағасы мен суретін жарияламаймыз. Сабақтар шағын топтарда өтеді, бала үшін бұл сабақтан кейінгі кәдімгі үйірме.',
+    q4: 'Сабақтар қай тілде өтеді?',
+    a4: 'Қазақша немесе орысша, бала мектепте қай тілде оқыса, сол тілде.',
+    q5: 'Сабақтар қайда өтеді?',
+    a5: 'Арал қаласында. Нақты мекенжайды танысу кезінде айтамыз. Тәлімгерлермен кейбір кездесулер онлайн өтеді.',
+    q6: 'Қатысу қанша уақытқа созылады?',
+    a6: 'Әдетте бір оқу жылы. Әр тоқсан сайын отбасымен бірге нәтижені қарап, әрі қарай не істейтінімізді шешеміз.',
+    q7: 'Қайырымдылық жарнаның балаларға жеткеніне қалай көз жеткізуге болады?',
+    a7: 'Әр тоқсан сайын есеп, жылына бір рет қаржылық есеп жариялаймыз. Бізге жазып, қаражатыңыздың неге жұмсалғанын сұрай аласыз.',
+    q8: 'Ақшадан басқа жолмен көмектесуге бола ма?',
+    a8: 'Иә. Бізге тәлімгерлер, репетиторлар, шеберлік сабағын өткізетін немесе өз мамандығы туралы айтып беретін адамдар, сондай-ақ кеңсе тауарлары мен спорт құралдары керек.',
+    contacts_kicker: 'Байланыс',
+    contacts_title: 'Бізге жазыңыз немесе қоңырау шалыңыз',
+    contacts_lead: 'Қазақ немесе орыс тілінде жауап береміз.',
+    c_address: 'Мекенжай',
+    c_hours: 'Жұмыс уақыты',
+    c_phone: 'Телефон',
+    c_email: 'Электрондық пошта',
+    c_map: 'Картадан ашу',
+    foot_name: '«Рахманбай» қайырымдылық қоры',
+    money_soon: 'Қайырымдылық жарнаға арналған деректемелер жақында осында жарияланады.',
+    contacts_soon: 'Қордың телефоны, WhatsApp нөмірі мен мекенжайы жақында осында жарияланады.',
+    trust_soon: 'Алғашқы есепті жұмыстың бірінші тоқсаны қорытындысы бойынша жариялаймыз.',
+    foot_named: 'Рахман Кадирханов атындағы',
+    foot_bin: 'БСН',
+    foot_privacy: 'Өтінім формасындағы деректер тек отбасымен байланысу үшін қолданылады және үшінші тұлғаларға берілмейді.',
+    foot_top: 'Жоғарыға'
+  };
+
+  /* Тексты, которые собирает скрипт (ошибки, заявка, подсказки). */
+  var MSG = {
+    ru: {
+      grade_ph: 'Выберите класс',
+      grade: function (n) { return n + ' класс'; },
+      err_required: 'Заполните это поле.',
+      err_phone: 'Проверьте номер: нужен формат +7 7XX XXX XX XX.',
+      err_grade: 'Выберите класс.',
+      err_consent: 'Без согласия мы не сможем рассмотреть заявку.',
+      err_summary: 'Проверьте поля, отмеченные выше.',
+      res_text_wa: 'Нажмите «Отправить в WhatsApp»: откроется чат фонда с готовым текстом. Отправьте сообщение, и мы свяжемся с вами, чтобы договориться о знакомстве.',
+      res_text_nowa: 'Скопируйте текст и отправьте его нам по телефону или почте из раздела «Контакты».',
+      res_text_none: 'Скопируйте и сохраните текст. Контакты фонда скоро появятся на сайте, и вы сможете отправить заявку.',
+      res_copied: 'Текст скопирован. Вставьте его в сообщение фонду.',
+      res_copy_fail: 'Не получилось скопировать автоматически. Текст выделен: скопируйте его вручную.',
+      copied: 'Скопировано',
+      copy_fail: 'Выделено',
+      m_head: 'Заявка в фонд «Рахманбай»',
+      m_parent: 'Родитель',
+      m_phone: 'Телефон',
+      m_child: 'Ребёнок',
+      m_school: 'Школа',
+      m_subjects: 'Трудные предметы',
+      m_talents: 'Нравится и получается',
+      m_concern: 'Беспокоит',
+      m_source: 'Узнали о фонде',
+      wa_mentor: 'Здравствуйте! Хочу стать наставником или репетитором в фонде «Рахманбай».',
+      wa_biz: 'Здравствуйте! Хочу обсудить партнёрство с фондом «Рахманбай».',
+    },
+    kk: {
+      grade_ph: 'Сыныпты таңдаңыз',
+      grade: function (n) { return n + '-сынып'; },
+      err_required: 'Бұл өрісті толтырыңыз.',
+      err_phone: 'Нөмірді тексеріңіз: +7 7XX XXX XX XX пішімі керек.',
+      err_grade: 'Сыныпты таңдаңыз.',
+      err_consent: 'Келісімсіз өтінімді қарай алмаймыз.',
+      err_summary: 'Жоғарыда белгіленген өрістерді тексеріңіз.',
+      res_text_wa: '«WhatsApp-қа жіберу» батырмасын басыңыз: қордың чаты дайын мәтінмен ашылады. Хабарламаны жіберіңіз, біз танысу уақытын келісу үшін өзіміз хабарласамыз.',
+      res_text_nowa: 'Мәтінді көшіріп, «Байланыс» бөліміндегі телефон немесе пошта арқылы бізге жіберіңіз.',
+      res_text_none: 'Мәтінді көшіріп, сақтап қойыңыз. Қордың байланыс деректері жақында сайтта жарияланады, сонда өтінімді жібере аласыз.',
+      res_copied: 'Мәтін көшірілді. Оны қорға жазатын хабарламаға қойыңыз.',
+      res_copy_fail: 'Автоматты түрде көшіру мүмкін болмады. Мәтін белгіленді: оны қолмен көшіріңіз.',
+      copied: 'Көшірілді',
+      copy_fail: 'Белгіленді',
+      m_head: '«Рахманбай» қорына өтінім',
+      m_parent: 'Ата-ана',
+      m_phone: 'Телефон',
+      m_child: 'Бала',
+      m_school: 'Мектеп',
+      m_subjects: 'Қиын пәндер',
+      m_talents: 'Ұнайтыны мен икемі',
+      m_concern: 'Алаңдататыны',
+      m_source: 'Қор туралы қайдан білді',
+      wa_mentor: 'Сәлеметсіз бе! «Рахманбай» қорында тәлімгер немесе репетитор болғым келеді.',
+      wa_biz: 'Сәлеметсіз бе! «Рахманбай» қорымен серіктестікті талқылағым келеді.',
+    }
+  };
+
+  var RU = {};
+  var lang = 'ru';
+  var STORE_KEY = 'rakhmanbay-lang';
+
+  function $(s, r) { return (r || document).querySelector(s); }
+  function $$(s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); }
+
+  function captureRu() {
+    $$('[data-i18n]').forEach(function (el) { var k = el.getAttribute('data-i18n'); if (!(k in RU)) RU[k] = el.innerHTML.trim(); });
+    $$('[data-i18n-ph]').forEach(function (el) { RU[el.getAttribute('data-i18n-ph')] = el.getAttribute('placeholder') || ''; });
+    $$('[data-i18n-aria]').forEach(function (el) { RU[el.getAttribute('data-i18n-aria')] = el.getAttribute('aria-label') || ''; });
+    var md = $('meta[name="description"]');
+    RU.doc_title = document.title;
+    RU.doc_desc = md ? md.getAttribute('content') : '';
+  }
+  function t(k) { var d = lang === 'kk' ? KK : RU; return (k in d) ? d[k] : RU[k]; }
+  function m(k) { var d = MSG[lang]; return (k in d) ? d[k] : MSG.ru[k]; }
+
+  /* ---------- CONFIG values ---------- */
+  function cfg(path) {
+    var v = path.split('.').reduce(function (o, k) { return o == null ? undefined : o[k]; }, CONFIG);
+    if (v && typeof v === 'object') v = v[lang] || v.ru || '';
+    return String(v || '').trim();
+  }
+  function normPhone(v) {
+    var d = String(v).replace(/\D/g, '');
+    if (d.length === 11 && d.charAt(0) === '8') d = '7' + d.slice(1);
+    if (d.length === 10) d = '7' + d;
+    return d;
+  }
+  function fmtPhone(v) {
+    var d = normPhone(v);
+    if (d.length !== 11) return v;
+    return '+' + d.charAt(0) + ' ' + d.slice(1, 4) + ' ' + d.slice(4, 7) + ' ' + d.slice(7, 9) + ' ' + d.slice(9);
+  }
+  function linkFor(key, v) {
+    switch (key) {
+      case 'phone': return 'tel:+' + normPhone(v);
+      case 'whatsapp': return 'https://wa.me/' + normPhone(v);
+      case 'email': return 'mailto:' + v;
+      case 'instagram': return 'https://instagram.com/' + v.replace(/^@/, '');
+      case 'telegram': return 'https://t.me/' + v.replace(/^@/, '');
+      default: return '';
+    }
+  }
+  function textFor(key, v) {
+    if (key === 'phone' || key === 'whatsapp' || key === 'kaspiPhone') return fmtPhone(v);
+    if (key === 'instagram' || key === 'telegram') return '@' + v.replace(/^@/, '');
+    return v;
+  }
+  function hasContact() {
+    return ['phone', 'whatsapp', 'email', 'instagram', 'telegram', 'address'].some(function (k) { return !!cfg(k); });
+  }
+  function renderConfig() {
+    $$('[data-cfg]').forEach(function (el) {
+      var key = el.getAttribute('data-cfg');
+      var v = cfg(key);
+      var row = el.closest('[data-row]');
+      while (el.firstChild) el.removeChild(el.firstChild);
+      if (row) row.hidden = !v;
+      if (!v) return;
+      var href = el.hasAttribute('data-link') ? linkFor(key, v) : '';
+      if (href) {
+        var a = document.createElement('a');
+        a.href = href;
+        a.textContent = textFor(key, v);
+        if (/^https?:/.test(href)) { a.target = '_blank'; a.rel = 'noopener'; }
+        el.appendChild(a);
+      } else {
+        el.textContent = textFor(key, v);
+      }
+    });
+    $$('[data-copy]').forEach(function (b) { b.disabled = !cfg(b.getAttribute('data-copy')); });
+    // A group with no filled values hides entirely; its "coming soon" note shows instead.
+    $$('[data-group]').forEach(function (g) {
+      g.hidden = !$$('[data-cfg]', g).some(function (el) { return !!cfg(el.getAttribute('data-cfg')); });
+    });
+    $$('[data-soon-for]').forEach(function (n) { n.hidden = !document.getElementById(n.getAttribute('data-soon-for')).hidden; });
+    $('#contacts-soon').hidden = hasContact();
+
+    var wa = cfg('whatsapp');
+    $$('[data-wa]').forEach(function (a) {
+      if (wa) {
+        a.href = 'https://wa.me/' + normPhone(wa) + '?text=' + encodeURIComponent(m(a.getAttribute('data-wa')));
+        a.target = '_blank'; a.rel = 'noopener';
+      } else {
+        a.href = '#contacts'; a.removeAttribute('target'); a.removeAttribute('rel');
+      }
+    });
+
+    var rep = cfg('reportsUrl'), repLink = $('#reports-link'), repSoon = $('#reports-soon');
+    if (/^https?:\/\//.test(rep)) { repLink.href = rep; repLink.hidden = false; repSoon.hidden = true; }
+    else { repLink.hidden = true; repSoon.hidden = false; }
+
+    var map = cfg('mapUrl'), mapLink = $('#map-link');
+    if (/^https?:\/\//.test(map)) { mapLink.href = map; mapLink.hidden = false; } else { mapLink.hidden = true; }
+  }
+
+  /* ---------- Language ---------- */
+  function renderGrades() {
+    var sel = $('#f-grade'), cur = sel.value;
+    sel.options[0].textContent = m('grade_ph');
+    for (var i = 1; i < sel.options.length; i++) sel.options[i].textContent = m('grade')(sel.options[i].value);
+    sel.value = cur;
+  }
+  function applyLang(l) {
+    lang = l === 'kk' ? 'kk' : 'ru';
+    document.documentElement.lang = lang;
+    $$('[data-i18n]').forEach(function (el) { var v = t(el.getAttribute('data-i18n')); if (v != null) el.innerHTML = v; });
+    $$('[data-i18n-ph]').forEach(function (el) { el.setAttribute('placeholder', t(el.getAttribute('data-i18n-ph'))); });
+    $$('[data-i18n-aria]').forEach(function (el) { el.setAttribute('aria-label', t(el.getAttribute('data-i18n-aria'))); });
+    document.title = t('doc_title');
+    var md = $('meta[name="description"]');
+    if (md) md.setAttribute('content', t('doc_desc'));
+    $$('.lang button').forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-lang') === lang)); });
+    $$('.err[data-key]').forEach(function (e) { e.textContent = m(e.getAttribute('data-key')); });
+    var sum = $('#form-summary'); if (!sum.hidden) sum.textContent = m('err_summary');
+    renderGrades();
+    renderConfig();
+    if (!$('#result').hidden) renderResult();
+    try { localStorage.setItem(STORE_KEY, lang); } catch (e) { /* storage unavailable */ }
+  }
+
+  /* ---------- Mobile menu ---------- */
+  var header = $('.site-header'), menuBtn = $('.menu-btn');
+  function setMenu(open) { header.classList.toggle('open', open); menuBtn.setAttribute('aria-expanded', String(open)); }
+  menuBtn.addEventListener('click', function () { setMenu(!header.classList.contains('open')); });
+  $$('.site-nav a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && header.classList.contains('open')) { setMenu(false); menuBtn.focus(); }
+  });
+  document.addEventListener('click', function (e) {
+    if (header.classList.contains('open') && !header.contains(e.target)) setMenu(false);
+  });
+  if (window.matchMedia) {
+    var mq = window.matchMedia('(min-width: 1200px)');
+    var onMq = function (e) { if (e.matches) setMenu(false); };
+    if (mq.addEventListener) mq.addEventListener('change', onMq); else if (mq.addListener) mq.addListener(onMq);
+  }
+
+  /* ---------- Copy helpers ---------- */
+  function selectNode(node) {
+    try { var r = document.createRange(); r.selectNodeContents(node); var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); } catch (e) { /* ignore */ }
+  }
+  function copyText(text, ok, fail) {
+    try {
+      navigator.clipboard.writeText(text).then(ok, fail);
+    } catch (e) { fail(); }
+  }
+  $$('[data-copy]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var v = cfg(btn.getAttribute('data-copy'));
+      if (!v) return;
+      var restore = function () { setTimeout(function () { btn.innerHTML = t('copy_btn'); }, 2000); };
+      copyText(v, function () { btn.textContent = m('copied'); restore(); },
+        function () { selectNode(document.getElementById(btn.getAttribute('data-target'))); btn.textContent = m('copy_fail'); restore(); });
+    });
+  });
+
+  /* ---------- Application form ---------- */
+  var form = $('#apply-form'), result = $('#result');
+  var F = {
+    parent: $('#f-parent'), phone: $('#f-phone'), child: $('#f-child'), grade: $('#f-grade'),
+    school: $('#f-school'), talents: $('#f-talents'), concern: $('#f-concern'), source: $('#f-source'), consent: $('#f-consent')
+  };
+  function setErr(input, key) {
+    var e = document.getElementById('e-' + input.id.slice(2));
+    if (key) {
+      input.setAttribute('aria-invalid', 'true');
+      e.setAttribute('data-key', key); e.textContent = m(key); e.hidden = false;
+    } else {
+      input.removeAttribute('aria-invalid');
+      e.removeAttribute('data-key'); e.textContent = ''; e.hidden = true;
+    }
+  }
+  function validate() {
+    var bad = [];
+    function check(el, ok, key) { setErr(el, ok ? null : key); if (!ok) bad.push(el); }
+    var phoneRaw = F.phone.value.trim(), pd = normPhone(phoneRaw);
+    check(F.parent, F.parent.value.trim().length >= 2, 'err_required');
+    check(F.phone, pd.length === 11 && pd.charAt(0) === '7', phoneRaw ? 'err_phone' : 'err_required');
+    check(F.child, F.child.value.trim().length >= 2, 'err_required');
+    check(F.grade, F.grade.value !== '', 'err_grade');
+    check(F.school, F.school.value.trim().length >= 1, 'err_required');
+    check(F.consent, F.consent.checked, 'err_consent');
+    return bad;
+  }
+  ['parent', 'phone', 'child', 'grade', 'school', 'consent'].forEach(function (k) {
+    var ev = (k === 'grade' || k === 'consent') ? 'change' : 'input';
+    F[k].addEventListener(ev, function () { if (F[k].getAttribute('aria-invalid')) setErr(F[k], null); });
+  });
+
+  function composeText() {
+    var subj = $$('input[name="subjects"]:checked').map(function (i) { return i.nextElementSibling.textContent.trim(); });
+    var lines = [
+      m('m_head'),
+      '',
+      m('m_parent') + ': ' + F.parent.value.trim(),
+      m('m_phone') + ': ' + F.phone.value.trim(),
+      m('m_child') + ': ' + F.child.value.trim() + ', ' + m('grade')(F.grade.value),
+      m('m_school') + ': ' + F.school.value.trim()
+    ];
+    if (subj.length) lines.push(m('m_subjects') + ': ' + subj.join(', '));
+    var tal = F.talents.value.trim(); if (tal) lines.push(m('m_talents') + ': ' + tal);
+    var con = F.concern.value.trim(); if (con) lines.push(m('m_concern') + ': ' + con);
+    if (F.source.value) lines.push(m('m_source') + ': ' + F.source.options[F.source.selectedIndex].textContent.trim());
+    return lines.join('\n');
+  }
+  function renderResult() {
+    var text = composeText();
+    $('#result-text').value = text;
+    var wa = cfg('whatsapp'), a = $('#result-wa');
+    if (wa) {
+      a.href = 'https://wa.me/' + normPhone(wa) + '?text=' + encodeURIComponent(text);
+      a.hidden = false;
+      $('#result-hint').textContent = m('res_text_wa');
+    } else {
+      a.hidden = true; a.removeAttribute('href');
+      $('#result-hint').textContent = m(hasContact() ? 'res_text_nowa' : 'res_text_none');
+    }
+    var st = $('#result-status'); st.textContent = ''; st.className = 'status';
+  }
+  function reduceMotion() { return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches; }
+
+  form.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    var bad = validate(), sum = $('#form-summary');
+    if (bad.length) { sum.textContent = m('err_summary'); sum.hidden = false; bad[0].focus(); return; }
+    sum.hidden = true;
+    renderResult();
+    form.hidden = true;
+    result.hidden = false;
+    result.focus({ preventScroll: true });
+    result.scrollIntoView({ block: 'start', behavior: reduceMotion() ? 'auto' : 'smooth' });
+  });
+  $('#result-copy').addEventListener('click', function () {
+    var ta = $('#result-text'), st = $('#result-status');
+    copyText(ta.value,
+      function () { st.className = 'status'; st.textContent = m('res_copied'); },
+      function () { ta.focus(); ta.select(); st.className = 'status warn'; st.textContent = m('res_copy_fail'); });
+  });
+  $('#result-edit').addEventListener('click', function () {
+    result.hidden = true;
+    form.hidden = false;
+    F.parent.focus();
+  });
+
+  /* ---------- Init ---------- */
+  captureRu();
+  var initial = 'ru';
+  try { var saved = localStorage.getItem(STORE_KEY); if (saved === 'kk' || saved === 'ru') initial = saved; } catch (e) { /* storage unavailable */ }
+  var h = (location.hash || '').slice(1);
+  if (h === 'kk' || h === 'ru') initial = h;
+  applyLang(initial);
+  $$('.lang button').forEach(function (b) { b.addEventListener('click', function () { applyLang(b.getAttribute('data-lang')); }); });
+  window.addEventListener('hashchange', function () { var x = location.hash.slice(1); if (x === 'kk' || x === 'ru') applyLang(x); });
+  $('#year').textContent = String(new Date().getFullYear());
+})();
+</script>
+</body>
+</html>
